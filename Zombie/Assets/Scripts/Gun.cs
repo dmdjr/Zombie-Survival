@@ -64,7 +64,17 @@ public class Gun : MonoBehaviour
     // 발사 시도
     public void Fire()
     {
+        // 현재 상태가 발사 가능한 상태
+        // && 마지막 총 발사 시점에서 gunData.timeBetFire 이상의 시간이 지남
+        if (state == State.Ready && Time.time >= lastFireTime + gunData.timeBetFire)
+        {
+            // 마지막 총 발사 시점 갱신
+            lastFireTime = Time.time;
+            // 실제 발사 처리 실행
+            Shot();
+        }
 
+        // lastFireTime + gunData.timeBetFire 이거는 쉽게 난사가 안되게끔 제한 걸어두는 로직이라고 생각하면 됨.
     }
 
     // 실제 발사 처리
