@@ -78,7 +78,6 @@
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\AmmoPack.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\License.txt" />
